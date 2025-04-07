@@ -1,3 +1,4 @@
+
 menu = {
     "pizza": 250,
     "pasta": 200,
@@ -16,6 +17,7 @@ quntity = int(input("Enter the quantity: "))
 
 total_oreder = 0
 
+
 if item_1 in menu:
     total_oreder += menu[item_1] * quntity
 
@@ -23,7 +25,11 @@ if item_1 in menu:
 else:
     print("item not found in menu")
 
-print(f"your order of {item_1} is added to your order ☺️")
+if quntity == 0:
+    print("thenks for visitting restaurant")
+
+else:
+    print(f"your order of {item_1} is added to your order ☺️")
 
 another_item = input("Do you want to order another item? (Y/N): ")
 
@@ -38,10 +44,10 @@ another_item = input("Do you want to order another item? (Y/N): ")
 #             print("item not found in menu")
 
 while another_item == "Y" or another_item == "y":
-    
+
     item_2 = input("Please enter the name of item you want to order: ")
     quntity = int(input("Enter the quantity: "))
-    
+
     if item_2 in menu:
         total_oreder += menu[item_2] * quntity
         print(f"item {item_2} has been added to your order ☺️")
